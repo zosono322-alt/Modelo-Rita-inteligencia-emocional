@@ -1,0 +1,1 @@
+# Modelo-Rita-inteligencia-emocional
