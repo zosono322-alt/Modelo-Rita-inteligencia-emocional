@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modelo RITA - Inteligencia Emocional</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function mostrarFrases(categoria) {
+            const frases = {
+                autoconciencia: [
+                    "Reconocer lo que siento es el primer paso para entenderme.",
+                    "La autoconciencia me permite tomar decisiones más sabias."
+                ],
+                regulacion: [
+                    "Respira, siente, responde con calma.",
+                    "La regulación emocional es clave para el bienestar."
+                ],
+                empatia: [
+                    "Ponerse en el lugar del otro transforma el mundo.",
+                    "La empatía construye puentes entre corazones."
+                ]
+            };
+            let contenedor = document.getElementById("frases");
+            contenedor.innerHTML = "<h2>Frases Positivas</h2><ul>" + frases[categoria].map(f => "<li>" + f + "</li>").join("") + "</ul>";
+        }
+    </script>
+</head>
+<body>
+    <h1>Galería Modelo RITA - Inteligencia Emocional</h1>
+    <div class="galeria">
+        <img src="assets/autoconciencia1.jpg" alt="Autoconciencia Emocional" onclick="mostrarFrases('autoconciencia')">
+        <img src="assets/regulacion1.jpg" alt="Regulación Emocional" onclick="mostrarFrases('regulacion')">
+        <img src="assets/empatia1.jpg" alt="Empatía" onclick="mostrarFrases('empatia')">
+    </div>
+    <div id="frases"></div>
+</body>
+</html>
